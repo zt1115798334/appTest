@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery/jquery-1.9.1.min.js"></script>
+    <script>
+        $(function () {
+            $("#date-select").bind("change",function () {
+                alert(1);
+            })
+            $(".articletype").bind("change",function () {
+                alert(this.id+this.value);
+            });
+            $('.search-text').bind('keypress',function(event){
+                if(event.keyCode == "13")
+                {
+                    alert(this.value);
+                }
+            });
+        });
+
+    </script>
+</head>
+<body>
+<select  id="date-select" onchange="">
+    <option value="week">近七天</option>
+    <option value="three">近三天</option>
+    <option value="today">今天</option>
+</select>
+
+<select id="emotion-select" class="articletype">
+    <option value="">全部感情</option>
+    <option value="positive">正面</option>
+    <option value="neutral">中性</option>
+    <option value="negative">负面</option>
+</select>
+
+<select id="media-select" class="articletype">
+    <option value="">全部媒体</option>
+    <option value="news">新闻</option>
+    <option value="wechat">微信</option>
+    <option value="weibo">微博</option>
+    <option value="blog">博客</option>
+    <option value="forum">论坛</option>
+</select>
+</div>
+<input id="text" class="search-text" type="text"/>
+</body>
+</html>
