@@ -10,24 +10,24 @@
     <script src="../bootstrap-3.3.7/src/bootstrap-paginator.js"></script>
     <script>
         $(function () {
-
-
             var options = {
-                size:"small",
                 bootstrapMajorVersion:3,
-                currentPage: 3,
-                numberOfPages: 5,
-                totalPages:11,
+                currentPage: 1, //初始化页码
+                numberOfPages: 5,   //只显示页数
+                totalPages:10,  //总页数
                 onPageClicked : function(event, originalEvent, type, page) {
                     pageIndex = page;
-                   alert(pageIndex);
-
                 }
             };
 
             $('#paging-control').bootstrapPaginator(options);
 
-        })
+        });
+
+        function testClick() {
+            var arra = $('#paging-control').bootstrapPaginator("getPages");
+            console.log(arra["current"]);
+        }
     </script>
 </head>
 <body>
@@ -36,6 +36,7 @@
     <ul class="pagination" id="paging-control">
 
     </ul>
+    <input type="button" onclick="testClick()">
 </nav>
 
 </body>
