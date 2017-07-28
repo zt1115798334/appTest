@@ -1,0 +1,21 @@
+<!DOCTYaE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery/jquery-1.9.1.min.js"></script>
+    <script>
+        $(function () {
+            $("#xiao").bind("change",function () {
+                alert($(this).is(":checked"));
+            })
+
+        })
+    </script>
+</head>
+<body>
+<div class="tag">
+   <input type="checkbox" id="xiao">
+</div>
+</body>
+</html>

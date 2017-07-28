@@ -5,46 +5,45 @@
     <title>Title</title>
     <script src="../jquery/jquery-1.9.1.min.js"></script>
     <script>
-        $(function () {
-            $("#date-select").bind("change",function () {
-                alert(1);
-            })
-            $(".articletype").bind("change",function () {
-                alert(this.id+this.value);
-            });
-            $('.search-text').bind('keypress',function(event){
-                if(event.keyCode == "13")
-                {
-                    alert(this.value);
-                }
-            });
-        });
-
+        function test() {
+            $("input").attr("class", "da");
+        }
     </script>
 </head>
 <body>
-<select  id="date-select" onchange="">
-    <option value="week">近七天</option>
-    <option value="three">近三天</option>
-    <option value="today">今天</option>
-</select>
-
-<select id="emotion-select" class="articletype">
-    <option value="">全部感情</option>
-    <option value="positive">正面</option>
-    <option value="neutral">中性</option>
-    <option value="negative">负面</option>
-</select>
-
-<select id="media-select" class="articletype">
-    <option value="">全部媒体</option>
-    <option value="news">新闻</option>
-    <option value="wechat">微信</option>
-    <option value="weibo">微博</option>
-    <option value="blog">博客</option>
-    <option value="forum">论坛</option>
-</select>
+<input type="button" onclick="test()" class="xiao">
+<div class="article transitioned">
+    <div class="title-box">
+        <i class="text-icon red"></i>
+        <a class="title">
+            家乡在变好，发展机会越来越多--传统输出大省农民回流趋势明显
+            <span class="source">[新浪科技-江西频道]</span>
+        </a>
+        <div class="tag">
+            <i class="small-icon icon-tag"></i>食品安全
+            <div class="select">
+                <select class="selectpicker select-white select-small">
+                    <option value="研判为">研判为</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <p class="article-content">
+        正月十五前后，往常都是农民工集中外出时段。记者近日在四川、重庆、湖南、安徽、江西等传统农民工输出省份采访发现，
+        得益于当地经济发展、产业结构优化、吸引政策落地、扶贫开发程度加深，农民工回流趋势明显。
+        得益于当地经济发展、产业结构优化、吸引政策落地、扶贫开发程度加深，农民工回流趋势明显。
+    </p>
+    <div class="article-info">
+        <span class="publish-date">02-05 12:33</span>
+        <span class="hot-index">
+                            <i class="small-icon icon-fire"></i>
+                            热度: 456
+                        </span>
+        <span class="carrier">
+                            <i class="small-icon icon-carrier"></i>
+                            载体: 微博
+                        </span>
+    </div>
 </div>
-<input id="text" class="search-text" type="text"/>
 </body>
 </html>
